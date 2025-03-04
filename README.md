@@ -2,7 +2,7 @@
 
 ## Meet "The Marchents"
 Sarah Jang - @ssjang25\
-Sarojini Torchon - Sarojini-T\
+Sarojini Torchon - @Sarojini-T\
 Danny Cedrone - @dannycedrone
 
 ## Overview of the Application
