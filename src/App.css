@@ -1,42 +1,20 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+@import "tailwindcss";
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+/* These are custom tailwind themes we can use.
+  Visual representation is available on the Figma. */
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+@theme {
+  /* Font Families */
+  --font-jomhuria: "Jomhuria", "sans-serif";
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  /* Color Palette */
+  --color-primary: #48733F;
+  /* buttons: hover color */
+  --color-secondary: #B6D7B0;
+  /* buttons: not hovering color */
+  --color-olive: #709C67;
+  /* box color for saved ingredients/locations */
+  --color-form: #B5C7B1;
+  /* box color for suggestion box */
+  --color-suggestion:#D7E6D3;
 }
