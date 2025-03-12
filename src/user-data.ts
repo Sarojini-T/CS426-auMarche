@@ -1,8 +1,9 @@
+import { LocationData, LOCATION_DATA } from "./location-data";
 type UserData = {
     userID: number;
     name: string;
     ingredients: string[]; // the user's saved ingredients
-    locations: string[]; // the user's saved locations
+    locations: LocationData[]; // the user's saved locations
 }
   
 const USER_DATA: UserData[] = [
@@ -15,8 +16,8 @@ const USER_DATA: UserData[] = [
             "Moyashi"
         ],
         locations: [
-            "Mum's House",
-            "Big Y"
+            LOCATION_DATA[1],
+            LOCATION_DATA[0]
         ]
     },
     {
@@ -28,8 +29,8 @@ const USER_DATA: UserData[] = [
             "Ssamjang"
         ],
         locations: [
-            "Stop & Shop",
-            "Mum's House"
+            LOCATION_DATA[2],
+            LOCATION_DATA[1]
         ]
     },
     {
@@ -41,8 +42,8 @@ const USER_DATA: UserData[] = [
             "Achiote paste"
         ],
         locations: [
-            "Don Quijote Market",
-            "Big Y"
+            LOCATION_DATA[4],
+            LOCATION_DATA[3]
         ]
     },
     {
@@ -54,11 +55,11 @@ const USER_DATA: UserData[] = [
             "Taro"
         ],
         locations: [
-            "Nubian Markets",
-            "Don Quijote Market"
+            LOCATION_DATA[5],
+            LOCATION_DATA[4]
         ]
     }
 ]
 
-export {USER_DATA};
-export type {UserData};
+export { USER_DATA };
+export type { UserData };
