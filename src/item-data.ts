@@ -38,6 +38,12 @@ const ITEM_DATA : ItemData[] = [
         japaneseNames : ["Dashi-ko","だし粉"],
         locations : [LOCATION_DATA[3], LOCATION_DATA[5]]
     },
+    {
+        englishNames : "Achiote paste", 
+        haitianKreyolNames : "",
+        japaneseNames : ["Anatō", "アナトー"],
+        locations : [LOCATION_DATA[3], LOCATION_DATA[5]]
+    },
 ]
 
 export { ITEM_DATA }
