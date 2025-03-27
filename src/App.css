@@ -6,6 +6,7 @@
 @theme {
   /* Font Families */
   --font-jomhuria: "Jomhuria", "sans-serif";
+  --font-anek: "Anek Gurmukhi";
 
   /* Color Palette */
   --color-primary: #48733F;
@@ -17,4 +18,6 @@
   --color-form: #B5C7B1;
   /* box color for suggestion box */
   --color-suggestion:#D7E6D3;
+  /* profile page subtitle green color */
+  --color-profiletitle: #95BD8C;
 }

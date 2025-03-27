@@ -5,6 +5,7 @@ function App() {
     <>
       <div>
         <h1 className="font-jomhuria text-5xl">Hi! Testing Jomhuria Font</h1>
+        <h1 className="font-anek text-5xl">Hi! Testing Anek Font</h1>
       </div>
     </>
   );
