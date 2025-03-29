@@ -1,40 +1,38 @@
-import { ItemData, ITEM_DATA } from "./item-data";
-
 type LocationData = {
     name: string;
-    items: ItemData[];
+    items: number[];
     city: string;
 }
 
 const LOCATION_DATA: LocationData[] = [
     {
         name: "Big Y",
-        items: [ITEM_DATA[3]],
+        items: [3],
         city: "Amherst"
     },
     {
         name: "Mum's House",
-        items: [ITEM_DATA[1], ITEM_DATA[2]],
+        items: [1, 2],
         city: "Amherst"
     },
     {
         name: "Stop & Shop",
-        items: [ITEM_DATA[0], ITEM_DATA[2]],
+        items: [0, 2],
         city: "Amherst"
     },
     {
         name: "Big Y",
-        items: [ITEM_DATA[2], ITEM_DATA[4], ITEM_DATA[5]],
+        items: [2, 4, 5],
         city: "Amherst"
     },
     {
         name: "Don Quijote Market",
-        items: [ITEM_DATA[0], ITEM_DATA[2]],
+        items: [0, 2],
         city: "Amherst"
     },
     {
         name: "Nubian Markets",
-        items: [ITEM_DATA[2], ITEM_DATA[4], ITEM_DATA[5]],
+        items: [2, 4, 5],
         city: "Amherst"
     }
 ]
