@@ -6,6 +6,8 @@ function App() {
     <Router>
       <div className='App'>
         <div className='content'>
+          <h1 className="font-jomhuria text-5xl">Hi! Testing Jomhuria Font</h1>
+          <h1 className="font-anek text-5xl">Hi! Testing Anek Font</h1>
           <Routes>
             <Route path='/'>
               {/* <Route index element={ <HomePage /> } /> */}
