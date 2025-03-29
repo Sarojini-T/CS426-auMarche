@@ -1,9 +1,9 @@
 import { LocationData, LOCATION_DATA } from "./location-data";
 
 type ItemData = {
-    englishNames :string | string[],
-    haitianKreyolNames : string | string[]
-    japaneseNames : string | string[]
+    englishNames : string[],
+    haitianKreyolNames : string[]
+    japaneseNames : string[]
     locations : LocationData[]
 }
 
