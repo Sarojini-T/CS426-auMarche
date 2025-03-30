@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from 'react-router'
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
+import ResultsPage from "./pages/ResultsPage/ResultsPage";
 
 function App() {
   return (
@@ -16,8 +17,8 @@ function App() {
             </Route>
             <Route path='/profile' element={ <ProfilePage /> }>
             </Route>
-            <Route path='/results'>
-              {/* <Route index element={ <ResultsPage /> } /> */}
+            <Route path='/results/:itemName'>
+              <Route index element={ <ResultsPage /> } />
             </Route>
           </Routes>
         </div>
