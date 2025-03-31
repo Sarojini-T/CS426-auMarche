@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ITEM_DATA, ItemData } from "../../data/item-data";
 import Title from "../ProfilePage/components/Title";
 import SearchBar from "./components/SearchBar";
+import { FaArrowLeft } from "react-icons/fa";
 
 const SuggestionsPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -26,6 +27,9 @@ const SuggestionsPage: React.FC = () => {
 
   return (
     <div className="w-[100vw] h-[100vh] flex flex-col items-center p-6">
+        <button className="absolute top-4 left-4 p-2 bg-gray-200 rounded-full">
+        <FaArrowLeft />
+      </button>
       <SearchBar value={searchTerm} onChange={setSearchTerm} />
       {searchTerm && (
         <div className="absolute bg-white shadow-lg w-[60%] mt-2 rounded-lg">
