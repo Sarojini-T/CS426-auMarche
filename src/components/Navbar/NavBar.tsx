@@ -27,7 +27,7 @@ const NavBar = () => {
                 </Col>
             </Row>
             <Row>
-                <Col xs={6} className="mt-2 mb-4 flex justify-end">
+                <Col xs={8} className="mt-2 mb-4 flex justify-end">
                     <NavSearchBar />
                 </Col>
                 {/* <Col xs={6} className="mt-2 "><LanguageSelection/></Col> */}
