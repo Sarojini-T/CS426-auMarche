@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router"
+import { Link, useParams } from "react-router"
 import { ITEM_DATA, ItemData } from "../../data/item-data";
 // import { Button, Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle, Col, Row } from "react-bootstrap";
 import item0 from "./assets/item0.png"
@@ -70,7 +70,9 @@ const ResultsPage = () => {
             </div>
             <div className="flex flex-row w-[100%] justify-center bg-white">
                 <div className="flex px-10 pt-3 flex-row mt-10 justify-center rounded-full bg-profiletitle font-bold font-anek align-middle pb-6">
-                    <button className="cursor-pointer hover:text-gray-400 pt-8 flex text-5xl">Have a suggestion?</button>
+                    <Link to="/suggestion">
+                        <button className="cursor-pointer hover:text-gray-400 pt-8 flex text-5xl">Have a suggestion?</button>
+                    </Link>
                 </div>
             </div>
         </div>
