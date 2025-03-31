@@ -1,42 +1,31 @@
 import React, { useState } from "react";
-import { ITEM_DATA } from "../../data/item-data";
-import { useNavigate } from "react-router-dom";
-import { MdClose } from "react-icons/md";
+import SearchBarDropdown  from "./SearchBarDropdown";
+import { UserValueContext } from "./UserValueContext";
 
+// This component will return an global search bar that will be store in the navBar and accessible 
+// to all other pages
 const NavSearchBar: React.FC = () => {
-  const [showList, setShowList] = useState<boolean>(false);
-  const data : string[] =  ITEM_DATA.flatMap(item => item.haitianKreyolNames);
-
-  // When user clicks enter they will be redirected to the results page
-  const navigateToPage = useNavigate();
-  const handleClick = (ingredient : string) => {
-      navigateToPage(`/results/${encodeURIComponent(ingredient)}`);
-  }
-
-  const handleCloseIconClick = () => {
-    setShowList(() => false)
-  }
+  // State to set the value of the input that will act as a search bar
+  const [value , setValue] =  useState<string>("");
+  
   return (
-    <div>
-      <input
-      type="text"
-      className="w-[110%] p-2 bg-white  focus:outline-none focus:ring-2 focus:ring-blue-500"
-      placeholder="Search for an ingredient..."
-      onFocus={() => setShowList(() => true)}
-    />
-    {showList && (
-        <div className="bg-white border w-[110%]">
-          <MdClose className="" onClick={handleCloseIconClick}></MdClose>
-          <ul>
-            {data.map((ingredient, index) => (
-              <li key={index} onMouseDown={() => handleClick(ingredient)}>{ingredient}</li>
-            ))}
-          </ul>
-
-        </div>
-    )}
-    </div>
-    
+    <>
+      <UserValueContext.Provider value={{value, setValue}}>
+        <div>
+        <input
+        type="text"
+        className="p-2 bg-white border-1 border-gray-400 focus:outline-[var(--color-secondary)] focus:text-[var(--color-primary)] 
+        w-10em xs:w-[15em]sm:w-[20em] md:w-[25em] xl:w-[30em] 2xl:w-[40em] h-8"
+        style={{fontFamily : "var( --font-anek)", color : "#808080"}}
+        placeholder="Search for an ingredient..."
+        value={value}
+        onChange={(event) => setValue(() => event.target.value)} // Update the value state to the word the user is typing currently
+        onBlur={() => setTimeout(() => setValue(() => ""), 100)} //Close the dropdown when suer clicks outside of the search bar
+      />
+      <SearchBarDropdown />
+      </div>
+      </UserValueContext.Provider>
+    </>
   );
 };
 
