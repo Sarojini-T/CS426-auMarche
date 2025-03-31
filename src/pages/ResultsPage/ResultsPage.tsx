@@ -10,6 +10,7 @@ import item4 from "./assets/item4.png"
 import item5 from "./assets/item5.png"
 import ListLocation from "./components/ListLocation";
 import { LOCATION_DATA } from "../../data/location-data";
+import NavBar from "../../components/Navbar/NavBar";
 
 
 const ResultsPage = () => {
@@ -25,7 +26,9 @@ const ResultsPage = () => {
 
     return (
         result &&
-        <div className="w-[100vw] h-[100vh] flex flex-col">
+        <>
+            <NavBar />
+            <div className="w-[100vw] h-[100vh] flex flex-col">
             <div className="flex flex-col mb-20">
                 <div className="flex flex-row justify-center w-[70%] self-center mb-3 mt-20">
                     <div className="flex flex-col font-jomhuria ml-20 justify-center">
@@ -73,6 +76,7 @@ const ResultsPage = () => {
                 </div>
             </div>
         </div>
+        </>
     );
     
 }

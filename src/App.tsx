@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router'
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import SuggestionPage from "./pages/UserSuggestionPage/SuggestionPage";
 import ResultsPage from "./pages/ResultsPage/ResultsPage";
+import Homepage from "./pages/Homepage/Homepage";
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
         <div className='content'>
           <Routes>
             <Route path='/'>
-              {/* <Route index element={ <HomePage /> } /> */}
+              <Route index element={ <Homepage /> } />
             </Route>
             <Route path='/suggestion' element={ <SuggestionPage /> }>
             </Route>

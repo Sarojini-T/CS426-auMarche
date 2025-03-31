@@ -5,10 +5,12 @@ import { LOCATION_DATA } from "../../data/location-data";
 import ListItem from "./components/ListItem";
 import { HiOutlinePencilSquare } from "react-icons/hi2";
 import { FaLocationDot } from "react-icons/fa6";
+import NavBar from "../../components/Navbar/NavBar";
 
 const ProfilePage = () => {
   return (
     <div className="w-[100vw] h-[100vh] flex flex-col">
+      <NavBar />
       <div className="flex flex-col mb-20">
         <div className="font-jomhuria text-6xl text-profileheader ml-7">
           Profile
