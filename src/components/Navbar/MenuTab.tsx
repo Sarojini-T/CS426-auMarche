@@ -25,14 +25,15 @@ export const Menu : React.FC = () => {
     // If the user clicked to open the menu, display dropdown menu with links to other pages
     if(currIcon == "close"){
         return (
-            <div className="flex flex-col absolute bg-[var(--color-secondary)] sm:w-[130px] md:w-[150px] lg:w-[175px] xl:w-[230px] 
-            sm-h-[250px] md:h-[192px] lg:h-[192px] xl:h-[212px]">
+            <div className="flex flex-col  bg-[var(--color-secondary)] w-[230px]
+            h-[99px]">
                 <MdClose className="text-4xl" onClick={() => handleClick("close")} color="white"/>
                 {/* Container to Center the page links */}
-                <div className="flex flex-col items-center justify-center">
-                    <a href="/" className="text-left text-white text-sm xs:text-2xl sm:text-3xl md:text-4xl lg:text-4xl" style={{fontFamily : "var(--font-jomhuria)", textDecoration: 'none'}}>Home</a> 
-                    <a href="/profile" className="text-left text-white text-sm xs:text-2xl sm:text-3xl md:text-4xl lg:text-4xl" style={{fontFamily : "var(--font-jomhuria)", textDecoration: 'none'}}>Profile</a>  
-                </div>
+                <nav className="flex flex-col items-center justify-center">
+                <a href="/" className="text-left text-white text-sm xs:text-1xl " style={{fontFamily : "var(--font-jomhuria)", textDecoration: 'none'}}>Home</a>
+                <a href="/profile" className="text-left text-white text-1xl" style={{fontFamily : "var(--font-jomhuria)", textDecoration: 'none'}}>Profile</a> 
+                <a href="/suggestion" className="text-left text-white text-1xl" style={{fontFamily : "var(--font-jomhuria)", textDecoration: 'none'}}>Suggestions</a>
+                </nav> 
                      
             </div>
         )
