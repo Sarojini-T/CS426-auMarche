@@ -1,21 +1,36 @@
+import NavBar from "../../components/Navbar/NavBar";
 import homepageImg from "./assets/homepageImg.jpeg";
+import Footer from "./components/Footer";
+import Tagline from "./components/Tagline";
+import WebsiteDescription from "./components/WebsiteDescription";
 
-const Homepage = () => {
+
+// This component will return the homepage of the Website which will contain the
+// navigation Bar, the website tagline, an image with the website description 
+// and a footer with the team members' names and emails
+const Homepage : React.FC = () => {
     return(
       <>
         {/* Grid container for homepage that will contain the navbar on top,
-        Image and website description side by side below it and a footer at
-        the bottom */}
-        <div className="grid grid-cols-5 grid-rows-6 h-screen">
-            <div className="col-span-full"> Navbar </div>
-            <img src={homepageImg} className="col-span-3 row-span-4  h-full w-full"/>
-            <div className="col-span-2 row-span-4 flex items-center justify-center  bg-[var(--color-primary)]">
-              <p className="text-left text-white  ml-5 mr-5 text-xl sm:text-2xl md:text-3xl" style={{fontFamily : "var(--font-jomhuria)"}}>Our goal for this project is to create a tool that promotes inclusivity and 
-                makes every culture feel welcome and represented, and able to continue making 
-                traditional food that helps them keep in touch with their cultural identity.</p>
+        Image and website description side by side below it and a footer at the bottom */}
+        <div className="grid grid-cols-5 grid-rows-7 h-screen">
+            {/* Container for the navigation bar */}
+            <div className="col-span-full"> 
+              <NavBar />
             </div>
-            <div className="col-span-full">Footer</div>
+
+            {/* Container for the website tagline */}
+            <div className="col-span-full flex items-center justify-center">
+              <Tagline />
+            </div>
+
+            <img src={homepageImg} className="col-span-3 row-span-5 h-full w-full"/>
+            {/* Container for the website description */}
+            <div className="col-span-2 row-span-5 flex items-center justify-center bg-[var(--color-primary)]">
+              <WebsiteDescription />
+            </div>
         </div> 
+        <div className="col-span-full" ><Footer /></div>
       </>
     );
 };
