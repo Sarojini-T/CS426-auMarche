@@ -1,5 +1,4 @@
-// This file will store potential ways each item can be misspelled and use a hashMap to map them
-// to the correct spelling(s)
+// This file will store potential ways each item can be misspelled 
 type misspelledData = {
     englishNames: string[];
     haitianKreyolNames: string[];
@@ -39,9 +38,9 @@ const MISSPELLED_DATA : misspelledData[] = [
     },
 ];
 
-// Nested array that will store all the misspelled words defined above by concatenating
-// each field's array
-const MisspelledDataArr = MISSPELLED_DATA.map((obj) => {
+// Nested array that will store all the misspelled words defined above by 
+// concatenating each field's array
+const MisspelledDataArr : string[][] = MISSPELLED_DATA.map((obj) => {
    return obj.haitianKreyolNames.concat(obj.englishNames, obj.japaneseNames)
    
 })

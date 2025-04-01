@@ -1,36 +1,37 @@
 import NavBar from "../../components/Navbar/NavBar";
 import homepageImg from "./assets/homepageImg.jpeg";
-import Footer from "./components/Footer";
 import Tagline from "./components/Tagline";
 import WebsiteDescription from "./components/WebsiteDescription";
 
-
 // This component will return the homepage of the Website which will contain the
-// navigation Bar, the website tagline, an image with the website description 
+// navigation Bar, the website tagline, an image along with the website description 
 // and a footer with the team members' names and emails
 const Homepage : React.FC = () => {
     return(
       <>
-        {/* Grid container for homepage that will contain the navbar on top,
+        {/* Flex container for homepage that will contain the navbar on top,
         Image and website description side by side below it and a footer at the bottom */}
-        <div className="grid grid-cols-5 grid-rows-7 h-screen">
-            {/* Container for the navigation bar */}
-            <div className="col-span-full"> 
-              <NavBar />
-            </div>
+        <div className="flex flex-col h-full">
+            <NavBar />
 
-            {/* Container for the website tagline */}
-            <div className="col-span-full flex items-center justify-center">
+            {/* Container for the tagline to center and properly position it on page */}
+            <div className="flex items-center justify-center mt-10 mb-5"> 
               <Tagline />
-            </div>
+            </div> 
+  
+          {/* Container positioning the website image and description side by side */}
+          <div className="flex flex-col items-center justify-center h-screen sm:flex-col md:flex-row lg:flex-row xl:flex-row">
+            <img src={homepageImg} className="h-[60%] w-full xs:w-full md:w-[70%] lg:w-[60%] xl:w-[65%] 2xl:w[60%]
+              xs:h-[50%] md:h-full lg:h-full xl:h-full 2xl:h-full"/>
 
-            <img src={homepageImg} className="col-span-3 row-span-5 h-full w-full"/>
-            {/* Container for the website description */}
-            <div className="col-span-2 row-span-5 flex items-center justify-center bg-[var(--color-primary)]">
+            {/* Container for website description */}
+            <div className="bg-[var(--color-primarygreen)] h-full w-full xs:w-full md:w-[30%] lg:w-[40%] xl:w-[35%] 
+            xs:h-[50%] md:h-full lg:h-full xl:h-full 
+            flex items-center justify center">
               <WebsiteDescription />
             </div>
+          </div>
         </div> 
-        <div className="col-span-full" ><Footer /></div>
       </>
     );
 };
