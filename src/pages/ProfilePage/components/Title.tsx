@@ -1,7 +1,7 @@
 const Title = ({ text }: { text: string }) => {
   return (
-    <div className="flex px-10 pt-3 flex-row mt-10 justify-center rounded-full bg-profiletitle font-bold font-anek">
-      <span className="flex text-5xl">{text}</span>
+    <div className="px-9 pt-3 mt-10 self-center rounded-full bg-profiletitle">
+      <span className="text-4xl font-bold font-anek">{text}</span>
     </div>
   );
 };
