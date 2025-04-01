@@ -4,7 +4,7 @@ type Props = {
 }
 const MemberEmail : React.FC<Props> = ({memberName}) => {
     return(
-        <a href="mailto:sthatikonda@umass.edu" style={{fontFamily : "var(--font-anek)", color : "var(--color-primary)"}}>{memberName}</a>  
+        <a href="mailto:sthatikonda@umass.edu" style={{fontFamily : "var(--font-anek)", color : "var(--color-primarygreen)"}}>{memberName}</a>  
     );
 }
 

@@ -45,7 +45,7 @@ const MatchedIngredients: React.FC<Props> = ({ foundMatch, setMatch }) => {
         className="mt-3 hover:bg-[#B6D7B0]"
         style={{
           fontFamily: "var( --font-anek)",
-          color: "var(--color-primary)",
+          color: "var(--color-primarygreen)",
         }}
         onMouseDown={() => handleSelect(ingredient)}
       >

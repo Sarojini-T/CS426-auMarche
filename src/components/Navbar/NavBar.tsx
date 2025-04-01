@@ -10,7 +10,7 @@ import NavSearchBar from './NavSearchBar';
 const NavBar = () => {
   return (
     <>
-        <div className=" bg-[var(--color-primary)]">
+        <div className=" bg-[var(--color-primarygreen)]">
         <Container fluid >
             {/* Flex container for navbar components */}
             <div className='flex flex-col'>
