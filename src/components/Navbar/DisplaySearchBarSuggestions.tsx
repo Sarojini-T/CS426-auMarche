@@ -1,16 +1,19 @@
 import { useContext } from "react";
-import { UserValueContext, userValueContextType } from "./NavBarContexts";
+import { SelectedLanguageContext, selectedLanguageContextType, UserValueContext, userValueContextType } from "./NavBarContexts";
 import { searchBarData } from "../../data/search-bar-data";
 import { MisspelledDataArr } from "../../data/misspelled-data";
 import { useNavigate } from "react-router-dom";
+import { navBarText } from "../../data/translated-text-data";
+// This component will return a list of suggested items when the user misspells a word.
+// It takes as input 2 props : one to update the isMisspelled state based on if we are able
+// to find the value in the misspelledDataArr or not and the other used to conditionally display the component.
 
+// Define type for props of this component
 type Props = {
   setAsMisspelled: React.Dispatch<React.SetStateAction<boolean>>;
   foundMatch: boolean;
 };
-// This component will return a list of suggested items when the user misspells a word.
-// It takes as input 2 props : one to update the isMisspelled state based on if we are able
-// to find the value in the misspelledDataArr or not and the other used to conditionally display the component.
+
 const DisplaySearchBarSuggestions: React.FC<Props> = ({
   setAsMisspelled,
   foundMatch,
@@ -23,7 +26,7 @@ const DisplaySearchBarSuggestions: React.FC<Props> = ({
   const navigateToPage = useNavigate();
   const handleSelect = (ingredient: string) => {
     navigateToPage(`/results/${encodeURIComponent(ingredient)}`);
-    // On results page, the dropdown should be closed
+    // On results page, the dropdown should be closed => set input value to empty
     setValue(() => "");
   };
   // Find the which array form the nested misspelledDataArr that contains words similar
@@ -46,6 +49,10 @@ const DisplaySearchBarSuggestions: React.FC<Props> = ({
     foundMatch == false && suggestedWords.length < 0 ? false : true
   );
 
+  // Get selected language to display correct text translation
+  const {selectedLanguage} : selectedLanguageContextType = useContext(SelectedLanguageContext);
+  const didYouMeanText = navBarText[selectedLanguage as keyof typeof navBarText].suggestion;
+
   // It should only be displayed when foundMatch = false and isMisspelled = true ie:
   // there are no matches in the matchedIngredients array but there is one here
   return suggestedWords.length > 0 && foundMatch == false ? (
@@ -57,7 +64,7 @@ const DisplaySearchBarSuggestions: React.FC<Props> = ({
           color: "var(--color-primary)",
         }}
       >
-        Did you mean...
+        {didYouMeanText}
       </p>
       {suggestedWords
         .filter((word) => word != "")

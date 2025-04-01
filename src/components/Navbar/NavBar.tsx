@@ -10,14 +10,14 @@ import NavSearchBar from './NavSearchBar';
 const NavBar = () => {
   return (
     <>
-            <div className=" bg-[var(--color-primary)]">
-            <Container fluid >
+        <div className=" bg-[var(--color-primary)]">
+        <Container fluid >
             {/* Flex container for navbar components */}
             <div className='flex flex-col'>
                 {/* Flex container for the website name and the hamburger menu icon */}
                 <div className="flex justify-between">
-                    <a href="/" className=" text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl 
-                    xl:text-6xl mt-3" style={{fontFamily : "var(--font-jomhuria)", textDecoration: 'none'}}>
+                    <a href="/" className=" text-white text-4xl sm:text-5xl md:text-5xl lg:text-5xl 
+                    xl:text-6xl mt-3 " style={{fontFamily : "var(--font-jomhuria)", textDecoration: 'none'}}>
                         🌺 auMarche </a>
                     <MenuTab />
                 </div>
@@ -28,9 +28,8 @@ const NavBar = () => {
                 </div>
             </div>
             </Container>
-            </div>
-    </>
-        
+        </div>
+    </>       
   );
 }
 
