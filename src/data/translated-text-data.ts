@@ -48,12 +48,12 @@ const navBarText : navBarTextType = {
         suggestions : "Sijesyon"
     },
     JPN : {
-        searchBarPlaceholder : "材料を検索してください...",
-        itemNotFound : "アイテムが見つかりません",
-        suggestion : "ということでしたか...",
+        searchBarPlaceholder : "材料を探す...",
+        itemNotFound : "材料がみつかりませんでした",
+        suggestion : "...ということでしたか？",
         Home : "ホームページ",
         Profile : "プロフィールページ",
-        suggestions : "提案"
+        suggestions : "ご提案"
     }
 }
 
@@ -90,9 +90,9 @@ const homepageText : homepageTextType = {
         contact : "Kontakte Nou"
     },
     JPN : {
-        tagline : "発見する。翻訳する。世界を味わいましょう。",
+        tagline : "発見する。翻訳する。世界を味わう。",
         description : "このプロジェクトの目標は、包括性を促進し、あらゆる文化が歓迎され代表されていると感じさせ、文化的アイデンティティとのつながりを維持するのに役立つ伝統的な食品を作り続けることができるツールを作成することです。" ,
-        contact : "お問い合わせ"
+        contact : "お問合せ"
     }
 }
 
@@ -135,7 +135,7 @@ const resultsPageText : resultsPageTextType = {
         englishNames : "英語名:",
         locations : "場所",
         onlineStores : "オンラインストア",
-        suggestionButton : "提案はありますか"
+        suggestionButton : "ご提案はありますか？"
     }
 }
 
@@ -180,11 +180,11 @@ const suggestionsPageText : suggestionsPageTextType = {
         submitButton : "Soumèt fòm"
     },
     JPN : {
-        searchBarPlaceholder : "材料を検索してください...",
+        searchBarPlaceholder : "材料を探す...",
         englishName : "英語名:",
-        formQuestion : "この商品をどこで見たことがありますか?",
-        suggestionPlaceholder : "ここに提案を入力してください...",
-        submitButton : "フォームを送信する"
+        formQuestion : "どこでこの食品を見たことはありますか?",
+        suggestionPlaceholder : "ここにご提案を入力してください...",
+        submitButton : "フォームを提出する"
     }
 }
 
@@ -220,8 +220,8 @@ const profilePageText : profilePageTextType = {
     },
     JPN : {
         profileTitle : "プロフィールページ",
-        savedIngredients : "保存された材料",
-        savedLocations : "保存された場所",
+        savedIngredients : "お気に入り材料",
+        savedLocations : "お気に入り場所",
     }
 }
 
