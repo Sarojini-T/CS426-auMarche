@@ -7,7 +7,7 @@ import Homepage from "./pages/Homepage/Homepage";
 import { SelectedLanguageContext } from "./components/Navbar/NavBarContexts";
 import { useState } from "react";
 import { getItem } from "./components/Navbar/LocalStorage";
-
+import Footer from "./pages/Homepage/components/Footer";
 
 function App() {
    const [selectedLanguage, setSelectedLanguage] = useState<string>(() => 
@@ -35,6 +35,7 @@ function App() {
           </div>
         </div>
       </Router>
+      <Footer />
     </SelectedLanguageContext.Provider>
   );
 }

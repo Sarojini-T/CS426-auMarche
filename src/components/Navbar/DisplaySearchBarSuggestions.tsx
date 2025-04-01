@@ -4,14 +4,16 @@ import { searchBarData } from "../../data/search-bar-data";
 import { MisspelledDataArr } from "../../data/misspelled-data";
 import { useNavigate } from "react-router-dom";
 import { navBarText } from "../../data/translated-text-data";
+// This component will return a list of suggested items when the user misspells a word.
+// It takes as input 2 props : one to update the isMisspelled state based on if we are able
+// to find the value in the misspelledDataArr or not and the other used to conditionally display the component.
 
+// Define type for props of this component
 type Props = {
   setAsMisspelled: React.Dispatch<React.SetStateAction<boolean>>;
   foundMatch: boolean;
 };
-// This component will return a list of suggested items when the user misspells a word.
-// It takes as input 2 props : one to update the isMisspelled state based on if we are able
-// to find the value in the misspelledDataArr or not and the other used to conditionally display the component.
+
 const DisplaySearchBarSuggestions: React.FC<Props> = ({
   setAsMisspelled,
   foundMatch,
