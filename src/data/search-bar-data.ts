@@ -2,7 +2,8 @@ import { ITEM_DATA } from "./item-data";
 
 // Iterate over the ITEM_DATA array of objects and for each object, combine the arrays 
 // containing the haitian kreyol, english and japanese names into a single array
-const searchBarData : string [] = [];
+const searchBarData : string[] = [];
+
 ITEM_DATA.forEach((obj) => (
     obj.haitianKreyolNames.forEach((name : string) => (
       searchBarData.push(name)
@@ -16,5 +17,6 @@ ITEM_DATA.forEach((obj) => (
       searchBarData.push(name)
     ))
 ))
+
 
 export {searchBarData };

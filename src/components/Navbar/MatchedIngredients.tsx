@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { searchBarData } from "../../data/search-bar-data";
-import { UserValueContext, userValueContextType } from "./NavBarContexts";
 import { useNavigate } from "react-router-dom";
+import { UserValueContext, userValueContextType } from "./NavBarContexts";
 
 type Props = {
   foundMatch: boolean;
