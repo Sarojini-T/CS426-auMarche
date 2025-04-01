@@ -10,6 +10,7 @@ import NavBar from "../../components/Navbar/NavBar";
 const ProfilePage = () => {
   return (
     <div className="w-[100vw] h-fit flex flex-col">
+      <NavBar />
       <div className="flex flex-col w-[100%] mb-20">
         <div className="flex self-center md:self-start text-8xl font-jomhuria md:ml-7 md:text-6xl text-profileheader">
           Profile
@@ -20,7 +21,7 @@ const ProfilePage = () => {
           </div>
           <div className="flex flex-col font-jomhuria ml-20 justify-center">
             <div className="flex flex-row h-21">
-              <span className="text-primary text-9xl pr-3">John Doe</span>
+              <span className="text-primarygreen text-9xl pr-3">John Doe</span>
               <button className="cursor-pointer hover:text-gray-400 pt-8">
                 <HiOutlinePencilSquare size={50} />
               </button>
@@ -37,7 +38,7 @@ const ProfilePage = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row h-fit bg-profilebg divide-x-2 divide-primary">
+      <div className="flex flex-col md:flex-row h-fit bg-profilebg divide-x-2 divide-primarygreen">
         <div className="flex flex-col w-[100%] md:w-[50%]">
           <Title text="Saved Ingredients" />
           <div className="flex flex-col self-center space-y-2 mt-6">

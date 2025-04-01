@@ -61,7 +61,7 @@ const DisplaySearchBarSuggestions: React.FC<Props> = ({
         className="ml-3 mt-3 font-bold"
         style={{
           fontFamily: "var( --font-anek)",
-          color: "var(--color-primary)",
+          color: "var(--color-primarygreen)",
         }}
       >
         {didYouMeanText}
@@ -75,7 +75,7 @@ const DisplaySearchBarSuggestions: React.FC<Props> = ({
             className="text-left hover:bg-[#B6D7B0]"
             style={{
               fontFamily: "var( --font-anek)",
-              color: "var(--color-primary)",
+              color: "var(--color-primarygreen)",
             }}
           >
             {word}

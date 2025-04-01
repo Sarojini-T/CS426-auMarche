@@ -25,7 +25,7 @@ const Homepage : React.FC = () => {
               xs:h-[50%] md:h-full lg:h-full xl:h-full 2xl:h-full"/>
 
             {/* Container for website description */}
-            <div className="bg-[var(--color-primary)] h-full w-full xs:w-full md:w-[30%] lg:w-[40%] xl:w-[35%] 
+            <div className="bg-[var(--color-primarygreen)] h-full w-full xs:w-full md:w-[30%] lg:w-[40%] xl:w-[35%] 
             xs:h-[50%] md:h-full lg:h-full xl:h-full 
             flex items-center justify center">
               <WebsiteDescription />

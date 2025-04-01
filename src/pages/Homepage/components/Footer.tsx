@@ -13,7 +13,7 @@ const Footer = () => {
     return(
         <>
             <div className="ml-3 mt-3 flex flex-col">
-                <p className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold" style={{fontFamily : "var(--font-anek)", color : "var(--color-primary)"}}>{contactUS}</p>
+                <p className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold" style={{fontFamily : "var(--font-anek)", color : "var(--color-primarygreen)"}}>{contactUS}</p>
                 <div className="flex gap-3">
                     <MemberEmail memberName={"Sarah Jang"} />
                     <MemberEmail memberName={"Sarojini Torchon"} />

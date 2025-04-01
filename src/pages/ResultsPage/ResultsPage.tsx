@@ -33,11 +33,11 @@ const ResultsPage = () => {
                 <div className="flex flex-row justify-center w-[70%] self-center mb-3 mt-20">
                     <div className="flex flex-col font-jomhuria ml-20 justify-center">
                         <div className="flex flex-row h-21">
-                            <span className="text-primary text-9xl pr-3">{itemName}</span>
+                            <span className="text-primarygreen text-9xl pr-3">{itemName}</span>
                         </div>
                         <div className="flex flex-row items-center">
                             <span className="text-profileheader pr-2 text-6xl pt-2">
-                                English names: <span className="text-primary ">{result.englishNames.join('/')}</span>
+                                English names: <span className="text-primarygreen">{result.englishNames.join('/')}</span>
                             </span>
                         </div>
                     </div>

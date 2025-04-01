@@ -17,7 +17,7 @@ const ItemNotFound : React.FC<Props> = ({foundMatch, isMisspelled}) => {
     const itemNotFoundText = navBarText[selectedLanguage as keyof typeof navBarText].itemNotFound;
 
     return isMisspelled == false && foundMatch == false && (
-        <div className="flex items-center justify-center mt-3" style={{fontFamily : "var( --font-anek)", color : "var(--color-primary)"}}>
+        <div className="flex items-center justify-center mt-3" style={{fontFamily : "var( --font-anek)", color : "var(--color-primarygreen)"}}>
             <p>{itemNotFoundText}</p>
         </div>
     );

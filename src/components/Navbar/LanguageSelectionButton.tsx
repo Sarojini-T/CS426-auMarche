@@ -17,7 +17,7 @@ export const LanguageSelectionButton : React.FC = () => {
         <Dropdown>
         <Dropdown.Toggle variant="success" id="dropdown-basic" className=" bg-white w-[4em] 
          text-sm sm:text-base md:text-lg lg:text-xl mb-2 h-8" 
-        style={{color : "var(--color-primary)", fontFamily: "var(--font-anek)" , borderRadius : "0px", fontSize: "0.75em"}}>
+        style={{color : "var(--color-primarygreen)", fontFamily: "var(--font-anek)" , borderRadius : "0px", fontSize: "0.75em"}}>
           {selectedLanguage}
         </Dropdown.Toggle>
 

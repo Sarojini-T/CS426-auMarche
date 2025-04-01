@@ -15,7 +15,7 @@ const LanguageSelectionItem : React.FC<Props> = ({languageCode}) => {
     }
 
     return(
-        <Dropdown.Item className="text-[10px] xs:text-[10px] md:text-[12px] xl:text-[12px] " style={{color : "var(--color-primary)" , fontFamily: "var(--font-anek)"}}
+        <Dropdown.Item className="text-[10px] xs:text-[10px] md:text-[12px] xl:text-[12px] " style={{color : "var(--color-primarygreen)" , fontFamily: "var(--font-anek)"}}
           onMouseDown={() => handleSelect(languageCode)}>{languageCode}</Dropdown.Item>
     );
 }
