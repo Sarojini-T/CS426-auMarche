@@ -8,6 +8,8 @@ type Props = {
 // It will take as props two states : one tracking if a value has been found in the searchBarData
 // and the other tracking if the value has been found in the misspelledDataArr
 const ItemNotFound : React.FC<Props> = ({foundMatch, isMisspelled}) => {
+    console.log("isMisspelled",isMisspelled)
+    console.log("foundMatch",foundMatch)
     return isMisspelled == false && foundMatch == false && (
         <div className="flex items-center justify-center mt-3" style={{fontFamily : "var( --font-anek)", color : "var(--color-primary)"}}>
             <p>Item not found</p>

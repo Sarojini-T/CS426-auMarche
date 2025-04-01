@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { searchBarData } from "../../data/search-bar-data";
 import { UserValueContext, userValueContextType } from "./NavBarContexts";
 import { useNavigate } from "react-router-dom";
@@ -24,7 +24,9 @@ const MatchedIngredients: React.FC<Props> = ({ foundMatch, setMatch }) => {
   );
 
   // Update the state based on if a match has been found or not
-  setMatch(() => (matchedIngredients.length > 0 ? true : false));
+  useEffect(() => {
+    return matchedIngredients.length > 0 ? setMatch(() => true) : setMatch(() => false);
+  },[matchedIngredients, setMatch])
 
   // When user presses the enter key, they will be redirected to the results page
   // adding the item they selected to the routes : result:selected-item

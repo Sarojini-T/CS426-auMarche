@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IoMenuSharp } from "react-icons/io5";
 import { MdClose } from "react-icons/md";
+import MenuLink from "./MenuLink";
 
 // This component will initially display a hamburger menu icon,
 // when clicked by the user it will disappear and a dropdown menu 
@@ -30,11 +31,10 @@ export const Menu : React.FC = () => {
                 <MdClose className="text-4xl" onClick={() => handleClick("close")} color="white"/>
                 {/* Container to Center the page links */}
                 <nav className="flex flex-col items-center justify-center">
-                <a href="/" className="text-left text-white text-sm xs:text-1xl " style={{fontFamily : "var(--font-jomhuria)", textDecoration: 'none'}}>Home</a>
-                <a href="/profile" className="text-left text-white text-1xl" style={{fontFamily : "var(--font-jomhuria)", textDecoration: 'none'}}>Profile</a> 
-                <a href="/suggestion" className="text-left text-white text-1xl" style={{fontFamily : "var(--font-jomhuria)", textDecoration: 'none'}}>Suggestions</a>
-                </nav> 
-                     
+                    <MenuLink route={"/"} page={"Home"} />
+                    <MenuLink route={"/profile"} page={"Profile"} />
+                    <MenuLink route={"/suggestion"} page={"Suggestions"} />
+                </nav>          
             </div>
         )
     }// if they closed the dropdown menu, display the hamburger menu

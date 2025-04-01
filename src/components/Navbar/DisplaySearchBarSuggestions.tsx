@@ -23,7 +23,7 @@ const DisplaySearchBarSuggestions: React.FC<Props> = ({
   const navigateToPage = useNavigate();
   const handleSelect = (ingredient: string) => {
     navigateToPage(`/results/${encodeURIComponent(ingredient)}`);
-    // On results page, the dropdown should be closed
+    // On results page, the dropdown should be closed => set input value to empty
     setValue(() => "");
   };
   // Find the which array form the nested misspelledDataArr that contains words similar

@@ -20,7 +20,7 @@ const NavSearchBar: React.FC = () => {
             placeholder="Search for an ingredient..."
             value={value}
             onChange={(event) => setValue(() => event.target.value)} // Update the value state to the word the user is typing currently
-            onBlur={() => setTimeout(() => setValue(() => ""), 100)} //Close the dropdown when suer clicks outside of the search bar
+            onBlur={() => setTimeout(() => setValue(() => ""), 100)} //Close the dropdown when user clicks outside of the search bar
           />
           <SearchBarDropdown />
         </div>
