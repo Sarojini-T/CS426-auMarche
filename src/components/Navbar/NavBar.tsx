@@ -3,25 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import MenuTab from './MenuTab';
 import LanguageSelection from './LanguageSelectionButton';
 import NavSearchBar from './NavSearchBar';
-import { getItem } from './LocalStorage';
-import { useState } from 'react';
-import { SelectedLanguageContext } from './NavBarContexts';
 
 // This component will return a navigation bar containing the website's name and logo
 // a hamburger menu containing a link to the homepage and profile page, a search bar and
 // a language selection button to set the language of the website
 const NavBar = () => {
-    // State to update and set users' language preferences
-    const [selectedLanguage, setSelectedLanguage] = useState<string>(() => 
-    // Retrieve selected language from local storage, if empty, set default to
-    // ENG
-    getItem("Selected Language") ?  getItem("Selected Language") : "ENG"
-    );
-
   return (
     <>
-        {/* Wrapper to pass context down to all pages via the NavBar */}
-        <SelectedLanguageContext.Provider value={{selectedLanguage , setSelectedLanguage}}>
             <div className=" bg-[var(--color-primary)]">
             <Container fluid >
             {/* Flex container for navbar components */}
@@ -41,7 +29,6 @@ const NavBar = () => {
             </div>
             </Container>
             </div>
-        </SelectedLanguageContext.Provider>
     </>
         
   );

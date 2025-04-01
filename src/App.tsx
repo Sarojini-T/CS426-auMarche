@@ -4,11 +4,13 @@ import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import SuggestionPage from "./pages/UserSuggestionPage/SuggestionPage";
 import ResultsPage from "./pages/ResultsPage/ResultsPage";
 import Homepage from "./pages/Homepage/Homepage";
+import SelectedLanguageContextProvider from "./components/SelectedLanguageProvider";
 
 
 function App() {
   return (
-    <Router>
+    <SelectedLanguageContextProvider>
+      <Router>
       <div className='App'>
         <div className='content'>
           <Routes>
@@ -26,6 +28,7 @@ function App() {
         </div>
       </div>
     </Router>
+    </SelectedLanguageContextProvider>  
   );
 }
 
