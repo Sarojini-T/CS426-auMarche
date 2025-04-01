@@ -8,12 +8,12 @@ import { FaLocationDot } from "react-icons/fa6";
 
 const ProfilePage = () => {
   return (
-    <div className="w-[100vw] h-[100vh] flex flex-col">
+    <div className="w-[100vw] h-fit flex flex-col">
       <div className="flex flex-col w-[100%] mb-20">
-        <div className="font-jomhuria text-6xl text-profileheader ml-7">
+        <div className="flex self-center md:self-start text-8xl font-jomhuria md:ml-7 md:text-6xl text-profileheader">
           Profile
         </div>
-        <div className="flex flex-col md:flex-row justify-center w-[70%] self-center mb-3 mt-20">
+        <div className="flex flex-col md:flex-row justify-center w-[100%] items-center self-center mb-3 mt-20">
           <div className="flex items-center justify-center">
             <img src={ProfilePic} />
           </div>
