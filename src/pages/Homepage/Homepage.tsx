@@ -1,4 +1,5 @@
 import NavBar from "../../components/Navbar/NavBar";
+import SelectedLanguageContextProvider from "../../components/SelectedLanguageProvider";
 import homepageImg from "./assets/homepageImg.jpeg";
 import Footer from "./components/Footer";
 import Tagline from "./components/Tagline";
@@ -11,7 +12,8 @@ import WebsiteDescription from "./components/WebsiteDescription";
 const Homepage : React.FC = () => {
     return(
       <>
-        {/* Grid container for homepage that will contain the navbar on top,
+        <SelectedLanguageContextProvider>
+          {/* Grid container for homepage that will contain the navbar on top,
         Image and website description side by side below it and a footer at the bottom */}
         <div className="grid grid-cols-5 grid-rows-7 h-screen">
             {/* Container for the navigation bar */}
@@ -31,6 +33,7 @@ const Homepage : React.FC = () => {
             </div>
         </div> 
         <div className="col-span-full" ><Footer /></div>
+        </SelectedLanguageContextProvider>
       </>
     );
 };

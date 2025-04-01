@@ -9,7 +9,7 @@ type navBarTextType = {
         suggestion : string
         Home : string,
         Profile : string,
-        suggestions : string
+        Suggestions : string
     },
     HT  : {
         searchBarPlaceholder : string,
@@ -17,7 +17,7 @@ type navBarTextType = {
         suggestion : string,
         Home : string,
         Profile : string,
-        suggestions : string
+        Suggestions : string
     },
     JPN : {
         searchBarPlaceholder : string,
@@ -25,7 +25,7 @@ type navBarTextType = {
         suggestion : string,
         Home : string,
         Profile : string,
-        suggestions : string
+        Suggestions : string
     }
 }
 
@@ -37,7 +37,7 @@ const navBarText : navBarTextType = {
         //menu tab links
         Home : "Home",
         Profile : "Profile",
-        suggestions : "Suggestions"
+        Suggestions : "Suggestions"
     },
     HT : {
         searchBarPlaceholder : "Chèche yon engredyan...",
@@ -45,7 +45,7 @@ const navBarText : navBarTextType = {
         suggestion : "Eske ou te vle di...",
         Home : "Paj Dakèy",
         Profile : "Paj Pwofil",
-        suggestions : "Sijesyon"
+        Suggestions : "Sijesyon"
     },
     JPN : {
         searchBarPlaceholder : "材料を検索してください...",
@@ -53,7 +53,7 @@ const navBarText : navBarTextType = {
         suggestion : "ということでしたか...",
         Home : "ホームページ",
         Profile : "プロフィールページ",
-        suggestions : "提案"
+        Suggestions : "提案"
     }
 }
 

@@ -9,9 +9,14 @@ type Props = {
 
 const LanguageSelectionItem : React.FC<Props> = ({languageCode}) => {
     const {setSelectedLanguage} : selectedLanguageContextType =  useContext(SelectedLanguageContext);
+
+    const handleSelect = (language : string) => {
+        setSelectedLanguage(() => language);
+    }
+
     return(
         <Dropdown.Item style={{color : "var(--color-primary)" , fontFamily: "var(--font-anek)"}}
-          onMouseDown={() => setSelectedLanguage(() => {return languageCode;})}>{languageCode}</Dropdown.Item>
+          onMouseDown={() => handleSelect(languageCode)}>{languageCode}</Dropdown.Item>
     );
 }
 

@@ -1,8 +1,9 @@
 import { useContext } from "react";
-import { UserValueContext, userValueContextType } from "./NavBarContexts";
+import { SelectedLanguageContext, selectedLanguageContextType, UserValueContext, userValueContextType } from "./NavBarContexts";
 import { searchBarData } from "../../data/search-bar-data";
 import { MisspelledDataArr } from "../../data/misspelled-data";
 import { useNavigate } from "react-router-dom";
+import { navBarText } from "../../data/translated-text-data";
 
 type Props = {
   setAsMisspelled: React.Dispatch<React.SetStateAction<boolean>>;
@@ -46,6 +47,10 @@ const DisplaySearchBarSuggestions: React.FC<Props> = ({
     foundMatch == false && suggestedWords.length < 0 ? false : true
   );
 
+  // Get selected language to display correct text translation
+  const {selectedLanguage} : selectedLanguageContextType = useContext(SelectedLanguageContext);
+  const didYouMeanText = navBarText[selectedLanguage as keyof typeof navBarText].suggestion;
+
   // It should only be displayed when foundMatch = false and isMisspelled = true ie:
   // there are no matches in the matchedIngredients array but there is one here
   return suggestedWords.length > 0 && foundMatch == false ? (
@@ -57,7 +62,7 @@ const DisplaySearchBarSuggestions: React.FC<Props> = ({
           color: "var(--color-primary)",
         }}
       >
-        Did you mean...
+        {didYouMeanText}
       </p>
       {suggestedWords
         .filter((word) => word != "")
