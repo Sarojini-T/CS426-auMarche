@@ -53,7 +53,7 @@ const navBarText : navBarTextType = {
         suggestion : "...ということでしたか？",
         Home : "ホームページ",
         Profile : "プロフィールページ",
-        suggestions : "ご提案"
+        Suggestions : "ご提案"
     }
 }
 
@@ -132,7 +132,7 @@ const resultsPageText : resultsPageTextType = {
         suggestionButton : "Gen yon sijesyon?"
     },
     JPN : {
-        englishNames : "英語名:",
+        englishNames : "英語名：",
         locations : "場所",
         onlineStores : "オンラインストア",
         suggestionButton : "ご提案はありますか？"
@@ -181,7 +181,7 @@ const suggestionsPageText : suggestionsPageTextType = {
     },
     JPN : {
         searchBarPlaceholder : "材料を探す...",
-        englishName : "英語名:",
+        englishName : "英語名：",
         formQuestion : "どこでこの食品を見たことはありますか?",
         suggestionPlaceholder : "ここにご提案を入力してください...",
         submitButton : "フォームを提出する"
