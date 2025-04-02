@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router"
+import { useNavigate, useParams } from "react-router"
 import { ITEM_DATA, ItemData } from "../../data/item-data";
 import item0 from "./assets/item0.png"
 import item1 from "./assets/item1.png"
