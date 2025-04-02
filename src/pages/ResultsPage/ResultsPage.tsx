@@ -39,33 +39,33 @@ const ResultsPage = () => {
             <NavBar />
         <div className="w-[100vw] h-fit flex flex-col">
             <div className="flex flex-col mb-20">
-                <div className="flex flex-row justify-center w-[70%] self-center mb-3 mt-20">
-                    <ItemInfo item={result} itemName={itemName!}/>
-                    <div className="flex items-center justify-center max-w-md">
+                <div className="flex flex-col md:flex-row justify-center w-[100%] self-center mb-3 mt-20">
+                    <div className="flex items-center justify-center">
                         <img src={images[ITEM_DATA.indexOf(result)]} />
                     </div>
+                    <ItemInfo item={result} itemName={itemName!}/>
                 </div>
             </div>
-            <div className="flex flex-row w-[100%] justify-center bg-profilebg divide-x-2 divide-white">
-                <div className="flex flex-col w-[50%]">
-                <div className="flex flex-col self-center space-y-2">
+            <div className="flex flex-col md:flex-row w-[100%] justify-center bg-profilebg divide-x-2 divide-white">
+            <div className="flex flex-col w-[100%] md:w-[50%]">
                     <div className="flex px-10 pt-3 flex-row mt-10 justify-center font-bold font-anek text-white">
                         <span className="flex text-5xl">{locations}</span>
                     </div>
-                    {LOCATION_DATA.map((location, index) => (
-                    <ListLocation text={location.name} key={index} />
-                    ))}
+                    <div className="flex flex-col self-center space-y-2 mt-6">
+                        {LOCATION_DATA.map((location, index) => (
+                        <ListLocation text={location.name} key={index} />
+                        ))}
+                    </div>
                 </div>
-                </div>
-                <div className="flex flex-col w-[50%]">
-                <div className="flex flex-col self-center space-y-2">
+                <div className="flex flex-col w-[100%] md:w-[50%]">
                     <div className="flex px-10 pt-3 flex-row mt-10 justify-center font-bold font-anek text-white">
                         <span className="flex text-5xl">{onlineStores}</span>
                     </div>
-                    {LOCATION_DATA.map((location, index) => (
-                    <ListLocation text={location.name} key={index} />
-                    ))}
-                </div>
+                    <div className="flex flex-col self-center space-y-2 mt-6">
+                        {LOCATION_DATA.map((location, index) => (
+                        <ListLocation text={location.name} key={index} />
+                        ))}
+                    </div>
                 </div>
             </div>
             <SuggestionButton buttonFn={() => navigate("/suggestion")} />
