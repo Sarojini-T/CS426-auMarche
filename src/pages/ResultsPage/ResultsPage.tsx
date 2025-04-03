@@ -68,7 +68,7 @@ const ResultsPage = () => {
                     </div>
                 </div>
             </div>
-            <SuggestionButton buttonFn={() => navigate("/suggestion")} />
+            <SuggestionButton buttonFn={() => navigate(`/suggestion/${itemName}`)} />
         </div>
         </>
     );

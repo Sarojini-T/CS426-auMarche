@@ -24,7 +24,8 @@ function App() {
               <Route path='/'>
                 <Route index element={ <Homepage /> } />
               </Route>
-              <Route path='/suggestion' element={ <SuggestionPage /> }>
+              <Route path='/suggestion/:itemName?'>
+                <Route index element={ <SuggestionPage /> } />
               </Route>
               <Route path='/profile' element={ <ProfilePage /> }>
               </Route>

@@ -4,9 +4,11 @@ import Title from "../ProfilePage/components/Title";
 import SearchBar from "./components/SearchBar";
 import NavBar from "../../components/Navbar/NavBar";
 import { FaArrowLeft } from "react-icons/fa";
+import { useParams } from "react-router";
 
 const SuggestionsPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState<string>("");
+  const { itemName } =  useParams();
+  const [searchTerm, setSearchTerm] = useState<string>(itemName === undefined ? "" : itemName);
   const [selectedItem, setSelectedItem] = useState<ItemData | null>(null);
   const [submitted, setSubmitted] = useState<boolean>(false);
 
