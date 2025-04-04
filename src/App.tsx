@@ -4,8 +4,9 @@ import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import SuggestionPage from "./pages/UserSuggestionPage/SuggestionPage";
 import ResultsPage from "./pages/ResultsPage/ResultsPage";
 import Homepage from "./pages/Homepage/Homepage";
-import Footer from "./pages/Homepage/components/Footer";
+import Footer from "./pages//Footer/Footer";
 import SelectedLanguageProvider from "./components/SelectedLanguageProvider";
+import AboutUsPage from "./pages/AboutUs/AboutUsPage";
 
 function App() {
   return (
