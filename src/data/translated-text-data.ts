@@ -9,7 +9,7 @@ type navBarTextType = {
         suggestion : string
         Home : string,
         Profile : string,
-        Suggestions : string
+        aboutUS : string
     },
     HT  : {
         searchBarPlaceholder : string,
@@ -17,7 +17,7 @@ type navBarTextType = {
         suggestion : string,
         Home : string,
         Profile : string,
-        Suggestions : string
+        aboutUS : string
     },
     JPN : {
         searchBarPlaceholder : string,
@@ -25,7 +25,7 @@ type navBarTextType = {
         suggestion : string,
         Home : string,
         Profile : string,
-        Suggestions : string
+        aboutUS : string
     }
 }
 
@@ -37,7 +37,7 @@ const navBarText : navBarTextType = {
         //menu tab links
         Home : "Home",
         Profile : "Profile",
-        Suggestions : "Suggestions"
+        aboutUS : "About Us"
     },
     HT : {
         searchBarPlaceholder : "Chèche yon engredyan...",
@@ -45,7 +45,7 @@ const navBarText : navBarTextType = {
         suggestion : "Eske ou te vle di...",
         Home : "Paj Dakèy",
         Profile : "Paj Pwofil",
-        Suggestions : "Sijesyon"
+        aboutUS : "Enfòmasyon sou nou"
     },
     JPN : {
         searchBarPlaceholder : "材料を探す...",
@@ -53,7 +53,7 @@ const navBarText : navBarTextType = {
         suggestion : "...ということでしたか？",
         Home : "ホームページ",
         Profile : "プロフィールページ",
-        Suggestions : "ご提案"
+        aboutUS : "弊社について"
     }
 }
 
@@ -225,5 +225,85 @@ const profilePageText : profilePageTextType = {
     }
 }
 
-export {navBarText, homepageText, resultsPageText , suggestionsPageText , profilePageText};
-export type {navBarTextType, homepageTextType, suggestionsPageTextType, profilePageTextType}
+// Type and data for aboutUs page
+type aboutUsTextType = {    
+    ENG : {
+        [name:string] : {
+            yearAndMajor : string,
+            background : string,
+        }
+    },
+    HT  : {
+        [name:string] : {
+            yearAndMajor : string,
+            background : string,
+        }
+    },
+    JPN : {
+        [name:string] : {
+            yearAndMajor : string,
+            background : string,
+        }
+    }
+}
+
+const aboutUSText : aboutUsTextType = {
+    ENG : {
+        "Sarojini Torchon" : {
+            yearAndMajor : "Senior, Computer Science & Maths Major",
+            background : "Experience with Front End Development + UI/UX design",
+        } ,
+        "Snigdha Thatikonda" : {
+            yearAndMajor : "Third year CS major, Business minor",
+            background : "Experience in Software Engineering and Web/App development",
+        },
+        "Danny Cedrone" : {
+            yearAndMajor : "Senior CS major, Japanese minor",
+            background : "Passionate about promoting DEI in tech",
+        },
+        "Sarah Jang" : {
+            yearAndMajor : "Senior, Chemistry Major turned Computer Science Major",
+            background : "Passionate about Front-End and Web development",
+        }
+    },
+    HT  : {
+       "Sarojini Torchon" : {
+            yearAndMajor : "Reto, Syans enfòmatik ak Matematik",
+            background : "Eksperyans ak Devlopman Front End + konsepsyon UI/UX",
+        } ,
+        "Snigdha Thatikonda" : {
+            yearAndMajor : "Twazyèm ane Syans enfòmatik, biznis minè",
+            background : "Eksperyans nan Jeni lojisyèl ak devlopman Web/App",
+        },
+        "Danny Cedrone" : {
+            yearAndMajor : "Reto CS, Japonè minè",
+            background : "Pasyone sou pwomosyon DEI nan teknoloji",
+        },
+        "Sarah Jang" : {
+            yearAndMajor : "Reto, Chimi ki tounen Syans enfòmatik",
+            background : "Pasyone pou Front-End ak devlopman entènèt",
+        }
+    },
+    JPN : {
+       "Sarojini Torchon" : {
+            yearAndMajor : "シニア、コンピュータサイエンスと数学専攻",
+            background : "フロントエンド開発 + UI/UX デザインの経験",
+        } ,
+        "Snigdha Thatikonda" : {
+            yearAndMajor : "3 年生 CS 専攻、ビジネス副専攻",
+            background : "ソフトウェアエンジニアリングと Web/アプリ開発の経験",
+        },
+        "Danny Cedrone" : {
+            yearAndMajor : "シニア CS 専攻、日本語副専攻",
+            background : "技術における DEI の推進に熱心",
+        },
+        "Sarah Jang" : {
+            yearAndMajor : "4年生、化学専攻からコンピュータサイエンス専攻に転向",
+            background : "フロントエンドとWeb開発に情熱を傾けている",
+        }
+    }
+}
+
+
+export {navBarText, homepageText, resultsPageText , suggestionsPageText , profilePageText, aboutUSText};
+export type {navBarTextType, homepageTextType, suggestionsPageTextType, profilePageTextType, aboutUsTextType}
