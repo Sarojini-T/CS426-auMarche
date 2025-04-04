@@ -35,11 +35,11 @@ export const Menu : React.FC = () => {
     if(currIcon == "close"){
         return (
             // w-[230px]
-            <div className="flex flex-col bg-[#9BC7917A] w-[5em] sm:w-[8em] md:w-[10em] lg:w-[12em] xl:w-[15em]
-            h-[221px] sm:h-[241px] md:h-[245px] lg:h-[250px] xl:h-[260px] absolute right-0 text-white">
+            <div className="flex flex-col absolute right-0 bg-[#9bc79186] w-[7em] sm:w-[8em] md:w-[10em] lg:w-[12em] xl:w-[15em]
+            h-auto text-white">
                 <MdClose className="text-2xl sm:text-1xl md:text-2xl lg:text-3xl xl:text-3xl" onClick={() => handleClick("close")} color="white"/>
                 {/* Container to Center the page links */}
-                <nav className="flex flex-col items-center  justify-center  ">
+                <nav className="flex flex-col items-center justify-center">
                     <MenuLink route={"/"} page={navBarTranslationObj.Home} />
                     <MenuLink route={"/profile"} page={navBarTranslationObj.Profile} />
                     <MenuLink route={"/aboutUs"} page={navBarTranslationObj.aboutUS} />

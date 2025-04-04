@@ -85,7 +85,7 @@ const homepageText : homepageTextType = {
         contact :  "Contact Us"
     },
     HT : {
-        tagline :"Dekouvri. Tradui. Goute mond lan.",
+        tagline :"Dekouvri. Tradwi. Goute mond lan.",
         description : "Objektif nou pou pwojè sa a se kreye yon zouti ki ankouraje enklizivite epi ki fè chak kilti santi yo akeyi ak reprezante, epi ki kapab kontinye fè manje tradisyonèl ki ede yo kenbe an kontak ak idantite kiltirèl yo.",
         contact : "Kontakte Nou"
     },
@@ -126,7 +126,7 @@ const resultsPageText : resultsPageTextType = {
         suggestionButton : "Have a suggestion?"
     },
     HT  : {
-        englishNames : "Non Angle:",
+        englishNames : "Non Anglè:",
         locations : "Lokasyon",
         onlineStores : "Magazen sou entènèt",
         suggestionButton : "Gen yon sijesyon?"
@@ -174,8 +174,8 @@ const suggestionsPageText : suggestionsPageTextType = {
     },
     HT  : {
         searchBarPlaceholder : "Chèche yon engredyan...",
-        englishName : "Non Angle:",
-        formQuestion : "Ki kote ou te wè atik sa a anvan?",
+        englishName : "Non Anglè:",
+        formQuestion : "Ki kote ou te wè atik sa a?",
         suggestionPlaceholder : "Antre sijesyon ou isit la...",
         submitButton : "Soumèt fòm"
     },

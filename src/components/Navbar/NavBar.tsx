@@ -21,16 +21,19 @@ const NavBar = () => {
                         🌺 auMarche </a>
                     <MenuTab />
                 </div>
-                {/* Flex container for the navbar and the language selection button */}
-                <div className="grid grid-cols-3">
-                    <div className="col-start-1">
+
+    
+                {/* Grid container to position the search bar in the middle and the language selection 
+                button in the lower right corner.*/}
+                <div className='grid grid-cols-3'>
+                    <div className="col-start-1">  
                         <LanguageSelection/>   
                     </div>
-                    <div className="col-start-2 justify-center">
+                    <div className='col-start-2 justify-self-center'>
                         <NavSearchBar />
-                    </div>
-                    
-                </div>
+                    </div>   
+                </div>   
+
             </div>
             </Container>
         </div>
