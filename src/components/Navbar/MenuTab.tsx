@@ -42,7 +42,7 @@ export const Menu : React.FC = () => {
                 <nav className="flex flex-col items-center  justify-center  ">
                     <MenuLink route={"/"} page={navBarTranslationObj.Home} />
                     <MenuLink route={"/profile"} page={navBarTranslationObj.Profile} />
-                    <MenuLink route={"/suggestion"} page={navBarTranslationObj.Suggestions} />
+                    <MenuLink route={"/aboutUs"} page={navBarTranslationObj.aboutUS} />
                 </nav>          
             </div>
         )
