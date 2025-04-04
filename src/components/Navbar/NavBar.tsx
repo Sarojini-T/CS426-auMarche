@@ -22,9 +22,14 @@ const NavBar = () => {
                     <MenuTab />
                 </div>
                 {/* Flex container for the navbar and the language selection button */}
-                <div className="flex items-center justify-center">
-                    <NavSearchBar />
-                    <LanguageSelection/>
+                <div className="grid grid-cols-3">
+                    <div className="col-start-1">
+                        <LanguageSelection/>   
+                    </div>
+                    <div className="col-start-2 justify-center">
+                        <NavSearchBar />
+                    </div>
+                    
                 </div>
             </div>
             </Container>
