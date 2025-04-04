@@ -25,7 +25,7 @@ const SuggestionsPage: React.FC = () => {
   const handleSubmit = () => {
     setSubmitted(true);
   };
-
+  
   return (
     <>
       <NavBar />
