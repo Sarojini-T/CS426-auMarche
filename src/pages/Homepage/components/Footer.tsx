@@ -15,10 +15,10 @@ const Footer = () => {
             <div className="ml-3 mt-3 flex flex-col">
                 <p className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold" style={{fontFamily : "var(--font-anek)", color : "var(--color-primarygreen)"}}>{contactUS}</p>
                 <div className="flex gap-3">
-                    <MemberEmail memberName={"Sarah Jang"} />
-                    <MemberEmail memberName={"Sarojini Torchon"} />
-                    <MemberEmail memberName={"Danny Cedrone"} />
-                    <MemberEmail memberName={"Snigdha Thatikonda"} />
+                    <MemberEmail memberName={"Sarah Jang"}  email={"ssjang@umass.edu"}/>
+                    <MemberEmail memberName={"Sarojini Torchon"} email={"jtorchon@umass.edu"} />
+                    <MemberEmail memberName={"Danny Cedrone"} email={"jcedrone@umass.edu"}/>
+                    <MemberEmail memberName={"Snigdha Thatikonda"} email={"sthatikonda@umass.edu"}/>
                 </div>   
             </div>
         </>
