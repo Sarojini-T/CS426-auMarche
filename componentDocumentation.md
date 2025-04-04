@@ -210,6 +210,131 @@ Screenshots or Live Previews:<img width="387" alt="Screenshot 2025-04-04 at 4 36
 
 
 ## Home Page Components
+
+### Homepage Component
+Name: Homepage\
+Purpose: This component renders the homepage of the site.\
+Props and Expected Data Types: none.
+
+Example Usage within the Application: User loads the site, page renders.
+```
+import Homepage from "./pages/Homepage/Homepage";
+
+const App = () => {
+  return (
+    {/* Additional Routes */}
+      <Route path='/'>
+        <Route index element={ <Homepage /> } />
+      </Route>
+    {/* Additional Routes */}
+  );
+}
+
+export default App;
+```
+Screenshots or Live Previews:
+![image](https://github.com/user-attachments/assets/71ea72ab-1264-4b5c-a21c-7e5a343d7248)
+
+
+
+### Footer Component
+Name: Footer\
+Purpose: This component returns the footer component of the site which includes contact information for the team members.\
+Props and Expected Data Types: none.
+
+Example Usage within the Application: App calls the Footer at the bottom of the page.
+```
+import Footer from "./pages/Homepage/components/Footer";
+{/* Additional imports */}
+const App = () => {
+  {/* Additional code */}
+  return (
+    {/* Additional code */}
+      <Footer />
+    {/* Additional code */}
+  );
+}
+
+export default App;
+```
+Screenshots or Live Previews:\
+![image](https://github.com/user-attachments/assets/35a00bd0-9547-4234-a0f1-9683fed22d5e)
+
+
+### MemberEmail Component
+Name: MemberEmail\
+Purpose: This component returns an href with the name given and link to the team member's email.\
+Props and Expected Data Types: \
+memberName: string - the name of the member to be displayed.
+
+Example Usage within the Application: Footer component calls MemberEmail component.
+```
+import MemberEmail from "./MemberEmail";
+{/* Additional imports */}
+const Footer = () => {
+  {/* Additional code */}
+  return (
+    {/* Additional code */}
+      <MemberEmail memberName={"Sarah Jang"} />
+    {/* Additional code */}
+  );
+}
+
+export default Footer;
+```
+Screenshots or Live Previews:\
+![image](https://github.com/user-attachments/assets/66fb907d-077e-417c-a2b5-acee19a0c891)
+
+
+### Tagline Component
+Name: Tagline\
+Purpose: This component returns the formatted tagline of the site.\
+Props and Expected Data Types: none.
+
+Example Usage within the Application: Homepage calls the Tagline component.
+```
+import Tagline from "./components/Tagline";
+{/* Additional imports */}
+const Homepage = () => {
+  {/* Additional code */}
+  return (
+    {/* Additional code */}
+      <Tagline />
+    {/* Additional code */}
+  );
+}
+
+export default Homepage;
+```
+Screenshots or Live Previews:\
+![image](https://github.com/user-attachments/assets/3f23a2d5-e0ff-47fb-bdb6-026eef6b52cf)
+
+
+
+### WebsiteDescription Component
+Name: WebsiteDescription\
+Purpose: This component returns the formatted description of the site.\
+Props and Expected Data Types: none.
+
+Example Usage within the Application: Homepage calls the Tagline component.
+```
+import WebsiteDescription from "./components/WebsiteDescription";
+{/* Additional imports */}
+const Homepage = () => {
+  {/* Additional code */}
+  return (
+    {/* Additional code */}
+      <WebsiteDescription />
+    {/* Additional code */}
+  );
+}
+
+export default Homepage;
+```
+Screenshots or Live Previews:\
+![image](https://github.com/user-attachments/assets/9783d4c4-8e6c-436e-b263-4a3a33b890d9)
+
+
 ## Profile Page Components
 ## Suggestions Page Components
 ### SuggestionsPage Component
