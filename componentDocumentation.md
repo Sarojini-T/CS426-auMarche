@@ -32,23 +32,15 @@ Example Usage within the Application: User starts typing "Malanga" and it popula
 const NavBar = () => {
   return (
     <>
-        <div className=" bg-[var(--color-primarygreen)]">
+        <div>
         <Container fluid >
             {/* Flex container for navbar components */}
-            <div className='flex flex-col'>
                 {/* Flex container for the website name and the hamburger menu icon */}
-                <div className="flex justify-between">
-                    <a href="/" className=" text-white text-4xl sm:text-5xl md:text-5xl lg:text-5xl 
-                    xl:text-6xl mt-3 " style={{fontFamily : "var(--font-jomhuria)", textDecoration: 'none'}}>
-                        🌺 auMarche </a>
-                    <MenuTab />
-                </div>
                 {/* Flex container for the navbar and the language selection button */}
                 <div className="flex items-center justify-center">
                     <NavSearchBar />
                     <LanguageSelection/>
                 </div>
-            </div>
             </Container>
         </div>
     </>       
@@ -64,34 +56,10 @@ Props and Expected Data Types: This component does not receive any props.\
 Example Usage within the Application: User misspells an ingredient, the search bar will suggest the proper spelling.
 ```
 const NavSearchBar: React.FC = () => {
-  // State to set the value of the input that will act as a search bar
-  const [value, setValue] = useState<string>("");
-
-  // Retrieve the selected language
-  const {selectedLanguage} : selectedLanguageContextType = useContext(SelectedLanguageContext);
-
-  // Find the corresponding data for the selected language
-  const searchBarPlaceholder = navBarText[selectedLanguage as keyof typeof navBarText].searchBarPlaceholder;
-  
   return (
     <>
-      <UserValueContext.Provider value={{ value, setValue }}>
-        <div className="mb-2">
-          <input
-            type="text"
-            className="p-2 bg-white border-1 border-gray-400 focus:outline-[var(--color-secondary)] focus:text-[var(--color-primarygreen)] 
-            w-10em xs:w-[15em] sm:w-[20em] md:w-[25em] xl:w-[30em] 2xl:w-[40em]  
-            placeholder:text-sm sm:placeholder:text-base md:placeholder:text-lg lg:placeholder:text-lg
-             h-8 relative"
-            style={{ fontFamily: "var( --font-anek)", color: "#808080" }}
-            placeholder={searchBarPlaceholder}
-            value={value}
-            onChange={(event) => setValue(() => event.target.value)} // Update the value state to the word the user is typing currently
-            onBlur={() => setTimeout(() => setValue(() => ""), 100)} //Close the dropdown when user clicks outside of the search bar
-          />
+        {/* NavSearchBar input code based on user value context */}
           <SearchBarDropdown />
-        </div>
-      </UserValueContext.Provider>
     </>
   );
 };
@@ -111,8 +79,8 @@ Example Usage within the Application: User clicks on hamburger menu, clicks prof
 const NavBar = () => {
   return (
     <>
-        <div className=" bg-[var(--color-primarygreen)]">
-        <Container fluid >
+        <div>
+        <Container >
         {/* Additional Code */}
                     <MenuTab />
         {/* Additional Code */}
@@ -132,27 +100,12 @@ Props and Expected Data Types: This component accepts booleans foundMatch and se
 Example Usage within the Application: A user starts typing "b" and the searchbar dropdown suggests "Bean Sprouts" and "Black Fungus".
 ```
 const SearchBarDropdown: React.FC = () => {
-  // Retrieve state from NavSearchBar
-  const { value }: userValueContextType = useContext(UserValueContext);
-  const [foundMatch, setMatch] = useState<boolean>(false);
-  const [isMisspelled, setAsMisspelled] = useState<boolean>(false);
-
-  // The dropdown menu displayed will depend on the three states defined above
-  // ie: has the user found a match, is the word misspelled or does that item no exist in our data
   return (
-    value && (
-      <div className="bg-white border-2 border-[var(--color-secondary)] absolute
-      w-[11em] sm:w-[20em] md:w-[25em] lg:w-[25em] xl:w-[30em]
-      h-auto focus:outline-[var(--color-secondary)]">
+      <div>
         <MatchedIngredients foundMatch={foundMatch} setMatch={setMatch} />
-        <DisplaySearchBarSuggestions
-          setAsMisspelled={setAsMisspelled}
-          foundMatch={foundMatch}
-        />
-        <ItemNotFound foundMatch={foundMatch} isMisspelled={isMisspelled} />
+        {/* Additional code */}
       </div>
-    )
-  );
+    );
 };
 
 export default SearchBarDropdown;
@@ -191,15 +144,15 @@ const NavBar = () => {
   return (
     <>
         <div>
-        <Container >
-            {/* Flex container for navbar components */}
-            <div className='flex flex-col'>
-            {/* Additional code */}
-                <div className="flex items-center justify-center">
-                    <NavSearchBar />
-                    <LanguageSelection/>
+            <Container >
+                {/* Flex container for navbar components */}
+                <div>
+                {/* Additional code */}
+                    <div>
+                        <NavSearchBar />
+                        <LanguageSelection/>
+                    </div>
                 </div>
-            </div>
             </Container>
         </div>
     </>       
@@ -216,21 +169,11 @@ Props and Expected Data Types: This component accepts two booleans, foundMatch, 
 Example Usage within the Application: User types in an ingredient not in our database, say "ewakroawer", searchbar dropdown will display "Item not found".
 ```
 const SearchBarDropdown: React.FC = () => {
-  const { value }: userValueContextType = useContext(UserValueContext);
-  const [foundMatch, setMatch] = useState<boolean>(false);
-  const [isMisspelled, setAsMisspelled] = useState<boolean>(false);
-
-  return (
-    value && (
+  return  (
       <div>
-        <MatchedIngredients foundMatch={foundMatch} setMatch={setMatch} />
-        <DisplaySearchBarSuggestions
-          setAsMisspelled={setAsMisspelled}
-          foundMatch={foundMatch}
-        />
+        {/* Additional Code */}
         <ItemNotFound foundMatch={foundMatch} isMisspelled={isMisspelled} />
       </div>
-    )
   );
 };
 
@@ -245,25 +188,16 @@ Props and Expected Data Types: It takes as input 2 props, setAsMisspelled, which
 Example Usage within the Application: User starts typing "ash" when they meant to type Anatō, the dropdown titles itself "Did you mean..." then displays Anatō as an search result option.
 ```
 const SearchBarDropdown: React.FC = () => {
-  // Retrieve state from NavSearchBar
-  const { value }: userValueContextType = useContext(UserValueContext);
-  const [foundMatch, setMatch] = useState<boolean>(false);
-  const [isMisspelled, setAsMisspelled] = useState<boolean>(false);
 
-  // The dropdown menu displayed will depend on the three states defined above
-  // ie: has the user found a match, is the word misspelled or does that item no exist in our data
   return (
-    value && (
-      <div className="bg-white border-2 border-[var(--color-secondary)] absolute
-      w-[11em] sm:w-[20em] md:w-[25em] lg:w-[25em] xl:w-[30em]
-      h-auto focus:outline-[var(--color-secondary)]">
-        <MatchedIngredients foundMatch={foundMatch} setMatch={setMatch} />
+    <div>
+        {/* Additional Code */}
         <DisplaySearchBarSuggestions
           setAsMisspelled={setAsMisspelled}
           foundMatch={foundMatch}
         />
-        <ItemNotFound foundMatch={foundMatch} isMisspelled={isMisspelled} />
-      </div>
+        {/* Additional Code */}
+    </div>
     )
   );
 };
