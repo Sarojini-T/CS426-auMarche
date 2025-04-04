@@ -206,37 +206,7 @@ export default SearchBarDropdown;
 ```
 Screenshots or Live Previews:<img width="387" alt="Screenshot 2025-04-04 at 4 36 58 PM" src="https://github.com/user-attachments/assets/7fb83ca7-930d-4dcb-b0b5-34d61762b849" />
 
-
-
-
-## Home Page Components
-
-### Homepage Component
-Name: Homepage\
-Purpose: This component renders the homepage of the site.\
-Props and Expected Data Types: none.
-
-Example Usage within the Application: User loads the site, page renders.
-```
-import Homepage from "./pages/Homepage/Homepage";
-
-const App = () => {
-  return (
-    {/* Additional Routes */}
-      <Route path='/'>
-        <Route index element={ <Homepage /> } />
-      </Route>
-    {/* Additional Routes */}
-  );
-}
-
-export default App;
-```
-Screenshots or Live Previews:
-![image](https://github.com/user-attachments/assets/71ea72ab-1264-4b5c-a21c-7e5a343d7248)
-
-
-
+## Footer Components
 ### Footer Component
 Name: Footer\
 Purpose: This component returns the footer component of the site which includes contact information for the team members.\
@@ -285,6 +255,81 @@ export default Footer;
 ```
 Screenshots or Live Previews:\
 ![image](https://github.com/user-attachments/assets/66fb907d-077e-417c-a2b5-acee19a0c891)
+
+## About Us Components
+### AboutUsPage Component
+Name: AboutUsPage\
+Purpose: This component renders the about page.\
+Props and Expected Data Types: none.
+
+Example Usage within the Application: User clicks the about us menu button, page renders.
+```
+import Homepage from "./pages/AboutUs/AboutUsPage";
+
+const App = () => {
+  return (
+    {/* Additional Routes */}
+      <Route path='/'>
+        <Route index element={ <AboutUsPage /> } />
+      </Route>
+    {/* Additional Routes */}
+  );
+}
+
+export default App;
+```
+Screenshots or Live Previews:
+![image](https://github.com/user-attachments/assets/a5fe60cd-f618-4440-bfca-85e7ff5c0608)
+
+### MemberCard Component
+Name: MemberCard\
+Purpose: This component returns the formatted card for each member.\
+Props and Expected Data Types:\
+name: string - name of the member to display.
+
+Example Usage within the Application: Homepage calls the Tagline component.
+```
+import MemberCard from "./MemberCard";
+{/* Additional imports */}
+const AboutUsPage = () => {
+  {/* Additional code */}
+  return (
+    {/* Additional code */}
+      <MemberCard name="Sarojini Torchon" />
+    {/* Additional code */}
+  );
+}
+
+export default AboutUsPage;
+```
+Screenshots or Live Previews:\
+
+
+## Home Page Components
+
+### Homepage Component
+Name: Homepage\
+Purpose: This component renders the homepage of the site.\
+Props and Expected Data Types: none.
+
+Example Usage within the Application: User loads the site, page renders.
+```
+import Homepage from "./pages/Homepage/Homepage";
+
+const App = () => {
+  return (
+    {/* Additional Routes */}
+      <Route path='/'>
+        <Route index element={ <Homepage /> } />
+      </Route>
+    {/* Additional Routes */}
+  );
+}
+
+export default App;
+```
+Screenshots or Live Previews:
+![image](https://github.com/user-attachments/assets/71ea72ab-1264-4b5c-a21c-7e5a343d7248)
 
 
 ### Tagline Component
