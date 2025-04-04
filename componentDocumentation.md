@@ -266,6 +266,7 @@ Name: MemberEmail\
 Purpose: This component returns an href with the name given and link to the team member's email.\
 Props and Expected Data Types: \
 memberName: string - the name of the member to be displayed.
+email: string - the email of the member to link to. 
 
 Example Usage within the Application: Footer component calls MemberEmail component.
 ```
@@ -336,6 +337,8 @@ Screenshots or Live Previews:\
 
 
 ## Profile Page Components
+
+
 ## Suggestions Page Components
 ### SuggestionsPage Component
 Name: SuggestionsPage\
