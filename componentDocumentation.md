@@ -5,7 +5,7 @@ Example usage within the application.
 Screenshots or live previews.
 ## Shared Components
 Name: Navbar\
-Purpose: This component allows the user to search for an ingredient and change the language of the website (English, Japanese, or Haitian Creole). \
+Purpose: This component allows the user to search for an ingredient, change the language of the website (English, Japanese, or Haitian Creole), and navigate to home, their profile, or the location suggestions page.\
 Props and Expected Data Types: This component does not receive any props.\
 Example Usage within the Application: User types an ingredient (ex: Malanga), user clicks on populated result in the dropdown, results page for Malanga renders.
 ```
