@@ -21,6 +21,7 @@ const NavBar = () => {
                         🌺 auMarche </a>
                     <MenuTab />
                 </div>
+
     
                 {/* Grid container to position the search bar in the middle and the language selection 
                 button in the lower right corner.*/}
@@ -32,6 +33,7 @@ const NavBar = () => {
                         <NavSearchBar />
                     </div>   
                 </div>   
+
             </div>
             </Container>
         </div>

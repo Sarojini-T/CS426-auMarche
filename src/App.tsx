@@ -4,25 +4,16 @@ import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import SuggestionPage from "./pages/UserSuggestionPage/SuggestionPage";
 import ResultsPage from "./pages/ResultsPage/ResultsPage";
 import Homepage from "./pages/Homepage/Homepage";
-import { SelectedLanguageContext } from "./components/Navbar/NavBarContexts";
-import { useState } from "react";
-import { getItem } from "./components/Navbar/LocalStorage";
-import Footer from "./pages/Footer/Footer";
+import Footer from "./pages//Footer/Footer";
+import SelectedLanguageProvider from "./components/SelectedLanguageProvider";
 import AboutUsPage from "./pages/AboutUs/AboutUsPage";
 
 function App() {
-  const [selectedLanguage, setSelectedLanguage] = useState<string>(() =>
-    // Retrieve selected language from local storage, if empty, set default to ENG
-    getItem("Selected Language") ? getItem("Selected Language") : "ENG"
-  );
-
   return (
-    <SelectedLanguageContext.Provider
-      value={{ selectedLanguage, setSelectedLanguage }}
-    >
-      <Router>
-        <div className="App">
-          <div className="content">
+    <SelectedLanguageProvider>
+        <Router>
+        <div className='App'>
+          <div className='content'>
             <Routes>
               <Route path="/">
                 <Route index element={<Homepage />} />
@@ -40,7 +31,7 @@ function App() {
         </div>
       </Router>
       <Footer />
-    </SelectedLanguageContext.Provider>
+    </SelectedLanguageProvider>
   );
 }
 

@@ -1,4 +1,3 @@
-//import { Dropdown } from "react-bootstrap";
 import { SelectedLanguageContext, selectedLanguageContextType } from "./NavBarContexts";
 import { useContext } from "react";
 
@@ -15,7 +14,9 @@ const LanguageSelectionItem : React.FC<Props> = ({languageCode}) => {
     }
 
     return(
-        <div  className="text-[10px] xs:text-[10px] md:text-[12px] xl:text-[12px] hover:bg-[var(--color-secondary)] text-center" style={{color : "var(--color-primarygreen)" , fontFamily: "var(--font-anek)"}}
+
+        <div className="text-[10px] xs:text-[10px] md:text-[12px] xl:text-[12px] text-center hover:bg-secondary" style={{color : "var(--color-primarygreen)" , fontFamily: "var(--font-anek)"}}
+
           onMouseDown={() => handleSelect(languageCode)}>{languageCode}</div>
     );
 }
