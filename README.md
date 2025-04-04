@@ -20,3 +20,6 @@ Website allowing people from various ethnicities to look up different ingredient
 ✅ Efficient state management (Avoid excessive state updates or unnecessary global state management (e.g., Redux))\
 ✅ Use of Chrome DevTools to monitor network performance, test responsitivity, and check Lighthouse tests\
 ✅ Ensure responsive design by accomadating for different screen sizes 
+
+## Milestone 1 Slide Deck
+[Slide Deck](https://docs.google.com/presentation/d/1yld3Ja3mk_0daUx7D0FmIgmg6n5zAVa3L2JAjsNUuNk/edit?usp=sharing)
