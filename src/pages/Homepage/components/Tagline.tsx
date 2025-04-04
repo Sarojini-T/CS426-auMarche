@@ -14,7 +14,7 @@ const Tagline = () => {
 
     return(
         <p className={`text-center ${taglineSize[0]} xs:${taglineSize[1]}  sm:${taglineSize[2]}  md:${taglineSize[3]}  lg:${taglineSize[4]}  xl:${taglineSize[5]}`}
-        style={{fontFamily : "var(--font-jomhuria)", color : "var(--color-primary)" }}>
+        style={{fontFamily : "var(--font-jomhuria)", color : "var(--color-primarygreen)" }}>
         {taglineText}</p>
     );
 }

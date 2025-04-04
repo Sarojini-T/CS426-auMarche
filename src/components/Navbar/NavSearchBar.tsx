@@ -20,7 +20,7 @@ const NavSearchBar: React.FC = () => {
         <div className="mb-2">
           <input
             type="text"
-            className="p-2 bg-white border-1 border-gray-400 focus:outline-[var(--color-secondary)] focus:text-[var(--color-primary)] 
+            className="p-2 bg-white border-1 border-gray-400 focus:outline-[var(--color-secondary)] focus:text-[var(--color-primarygreen)] 
             w-10em xs:w-[15em] sm:w-[20em] md:w-[25em] xl:w-[30em] 2xl:w-[40em]  
             placeholder:text-sm sm:placeholder:text-base md:placeholder:text-lg lg:placeholder:text-lg
              h-8 relative"
