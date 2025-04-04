@@ -337,6 +337,88 @@ Screenshots or Live Previews:\
 
 
 ## Profile Page Components
+### ProfilePage Component
+Name: ProfilePage\
+Purpose: This component renders the profile page.\
+Props and Expected Data Types: none.
+
+Example Usage within the Application: User clicks on the profile button, page renders.
+```
+import ProfilePage from "./pages/ProfilePage/ProfilePage";
+
+const App = () => {
+  return (
+    {/* Additional Routes */}
+      <Route path='/profile'>
+        <Route index element={ <ProfilePage /> } />
+      </Route>
+    {/* Additional Routes */}
+  );
+}
+
+export default App;
+```
+Screenshots or Live Previews:
+![image](https://github.com/user-attachments/assets/21cbed3f-5b6c-4157-9f50-17997414132e)
+
+### ListItem Component
+Name: ListItem\
+Purpose: This component returns an item styled in the format of a list for the profile page.\
+Props and Expected Data Types:\
+text: string - the text to display in the list item.
+
+Example Usage within the Application: Locations and ingredients are listed in the profile page.
+```
+import ListItem from "./components/ListItem";
+import { ITEM_DATA } from "../../data/item-data";
+{/* Additional imports */}
+
+const ProfilePage = () => {
+  {/* Additional code */}
+  return (
+    {/* Additional code */}
+      <div className="flex flex-col self-center space-y-2 mt-6">
+        {ITEM_DATA.map((item, index) =>
+          item.haitianKreyolNames[0] !== "" ? (
+            <ListItem text={item.haitianKreyolNames[0]} key={index} />
+          ) : null
+        )}
+      </div>
+    {/* Additional code */}
+  );
+}
+
+export default ProfilePage;
+```
+Screenshots or Live Previews:\
+![image](https://github.com/user-attachments/assets/54668947-4383-4655-ac5d-cf7ed6329e88)
+
+### Title Component
+Name: Title\
+Purpose: This component returns the text formatted as a title for the profile page.\
+Props and Expected Data Types:\
+text: string - the text to display in the title.
+
+Example Usage within the Application: Titles on the profile page display either "Saved Ingredients" or "Saved Locations".
+```
+import Title from "./components/Title";
+{/* Additional imports */}
+const ResultsPage = () => {
+  const [result, setResult] = useState<ItemData>();
+  {/* Additional code */}
+  return (
+    {/* Additional code */}
+      <Title text={ingredientTitle} />
+    {/* Additional code */}
+      <Title text={locationTitle} />
+    {/* Additional code */}
+  );
+}
+
+export default ProfilePage;
+```
+Screenshots or Live Previews:\
+![image](https://github.com/user-attachments/assets/ad8f684d-1ded-4777-bbe1-16ea58a9091a)
 
 
 ## Suggestions Page Components
