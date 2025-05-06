@@ -1,6 +1,6 @@
 /**
  * This file boots up the express server and connects to the MongoDB cluster.
- * 1. To set up a service, copy this entire folder (user-service) and follow the template below.
+ * 1. To set up a service, copy this entire folder (user-service), run npm i inside it, and follow the template below.
  * 
  * 2. After completing your service, you need to add it to api-gateway/index.js
  * 
@@ -49,7 +49,7 @@ let db = client.db("userDB");
 app.use(cors());
 app.use(express.json());
 //The port for this service is 5050, so the service will be available at http://localhost:5050
-//The line below registers the test routes with the express app, so the API calls are available at http://localhost:5050/users
+//The line below registers the users routes with the express app, so the API calls are available at http://localhost:5050/users
 app.use("/users", users);
 
 // Start server
