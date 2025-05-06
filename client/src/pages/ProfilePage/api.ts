@@ -7,7 +7,7 @@ type UserLocation = {
   location: string;
 }
 
-// Example function to fetch all users from the API
+// Example function to fetch Sarah's location from the userDB database
 export const fetchUserLocation = async (): Promise<string> => {
   try {
     const response = await axios.get<UserLocation[]>(`${API_BASE_URL}/users/location`);

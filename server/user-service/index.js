@@ -1,4 +1,10 @@
 /**
+ * To see the user-service and api-gateway in action, run npm i in each folder (/server, /server/user-service, /server/api-gateway)
+ * Then run 'npm run dev' in the /server folder to start the API gateway and all services at once
+ * Using thunderclient/curl/postman, you can test the API gateway at http://localhost:8000/users/location
+ * 
+ * 
+ * 
  * This file boots up the express server and connects to the MongoDB cluster.
  * 1. To set up a service, copy this entire folder (user-service), run npm i inside it, and follow the template below.
  * 
