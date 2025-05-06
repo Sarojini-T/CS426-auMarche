@@ -15,7 +15,7 @@ router.get("/location", async (req, res) => {
   try {
     // db.collection("users") lets me access the users collection of the usersDB database (as defined in index.js)
     const location = await db.collection("users").find({name:"Sarah"}).project({location: 1}).toArray();
-    res.json(location);
+    res.status(200).json(location);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

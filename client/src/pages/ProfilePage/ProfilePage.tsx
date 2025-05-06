@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   SelectedLanguageContext,
   selectedLanguageContextType,
@@ -15,7 +15,10 @@ import { LOCATION_DATA } from "../../data/location-data";
 import { HiOutlinePencilSquare } from "react-icons/hi2";
 import { FaLocationDot } from "react-icons/fa6";
 
+import { fetchUserLocation } from "./api";
+
 const ProfilePage = () => {
+  const [location, setLocation] = useState("");
   // Retrieve the selected language
   const { selectedLanguage }: selectedLanguageContextType = useContext(
     SelectedLanguageContext
@@ -30,6 +33,15 @@ const ProfilePage = () => {
   const locationTitle =
     profilePageText[selectedLanguage as keyof typeof profilePageText]
       .savedLocations;
+
+  // Example of calling our API in the frontend
+  // It accesses the location of a user "Sarah" in the userDB database
+  useEffect(() => {
+    fetchUserLocation()
+      .then((location) => setLocation(location))
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <div className="w-[100vw] h-fit flex flex-col">
       <NavBar />
@@ -59,7 +71,7 @@ const ProfilePage = () => {
             <div className="flex flex-row items-center">
               <FaLocationDot size={25} className="mr-3" />
               <span className="text-profileheader pr-2 text-6xl pt-2">
-                Boston, MA
+                {location}
               </span>
               <button className="cursor-pointer hover:text-gray-400">
                 <HiOutlinePencilSquare size={28} />
