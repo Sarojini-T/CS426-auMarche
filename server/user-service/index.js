@@ -20,8 +20,8 @@ import users from "./userRoutes.js";
 const app = express();
 //The PORT is different for each service, so make sure to change it for each service
 const PORT = 5050;
-// This is the URI Mongo uses to connect to the cluster. ONLY replace the <username> and <password> with your own.
-const uri = "mongodb+srv://<username>:<password>@aumarche.omomaq8.mongodb.net/?retryWrites=true&w=majority&appName=auMarche"
+// This is our shared account to access the MongoDB cluster. No need to change this
+const uri = "mongodb+srv://CS426:timiscool@aumarche.omomaq8.mongodb.net/?retryWrites=true&w=majority&appName=auMarche"
 
 const client = new MongoClient(uri, {
   serverApi: {
