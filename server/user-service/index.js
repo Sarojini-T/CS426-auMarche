@@ -1,10 +1,13 @@
 /**
  * This file boots up the express server and connects to the MongoDB cluster.
- * To set up a service, copy this entire folder (user-service) and follow the template below.
- * Also, in the package.json in /server, add your service to the "scripts" section as I've done with user-service to
+ * 1. To set up a service, copy this entire folder (user-service) and follow the template below.
+ * 
+ * 2. After completing your service, you need to add it to api-gateway/index.js
+ * 
+ * 3. In the package.json in /server, add your service to the "scripts" section as I've done with user-service to
  * run all services and the API gateway at once.
  * 
- * I also separated our frontend into the client folder. In src/pages/ProfilePage, I have an example of how
+ * 4. I also separated our frontend into the client folder. In src/pages/ProfilePage, I have an example of how
  * I called users/location API route to get the location of user "Sarah" from the userDB database
  */
 
