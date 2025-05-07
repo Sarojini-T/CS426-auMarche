@@ -13,6 +13,7 @@ const PORT = 8000;
  * The URL should be the same as the one you used in your respective service
  */
 const USER_SERVICE_URL = "http://localhost:5050/users";
+const STORE_SERVICE_URL = "http://localhost:5000/stores";
 
 app.use(cors());
 
@@ -27,6 +28,15 @@ app.use(
     target: USER_SERVICE_URL,
     changeOrigin: true,
     pathRewrite: { '^/users': '' },
+  })
+);
+
+app.use(
+  "/stores",
+  createProxyMiddleware({
+    target: STORE_SERVICE_URL,
+    changeOrigin: true,
+    pathRewrite: { '^/stores': '' },
   })
 );
 
