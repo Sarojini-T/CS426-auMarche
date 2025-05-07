@@ -15,10 +15,14 @@ const LanguageSelectionItem : React.FC<Props> = ({languageCode}) => {
 
     return(
 
-        <div className="text-[10px] xs:text-[10px] md:text-[12px] xl:text-[12px] text-center hover:bg-secondary" style={{color : "var(--color-primarygreen)" , fontFamily: "var(--font-anek)"}}
-
-          onMouseDown={() => handleSelect(languageCode)}>{languageCode}</div>
+        <div className="text-[10px] xs:text-[10px] md:text-[12px] xl:text-[12px] text-center
+        hover:bg-secondary" style={{color : "var(--color-primarygreen)" , 
+        fontFamily: "var(--font-anek)"}}
+        onMouseDown={() => handleSelect(languageCode)}>{languageCode}</div>
     );
 }
 
 export default LanguageSelectionItem;
+
+
+

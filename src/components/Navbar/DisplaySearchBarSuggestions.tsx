@@ -58,17 +58,10 @@ const DisplaySearchBarSuggestions: React.FC<Props> = ({
   return suggestedWords.length > 0 && foundMatch == false ? (
     <>
       <p
-        className="ml-3 mt-3 font-bold"
-        style={{
-          fontFamily: "var( --font-anek)",
-          color: "var(--color-primarygreen)",
-        }}
-      >
+        className="ml-3 mt-3 font-bold" style={{fontFamily: "var( --font-anek)",color: "var(--color-primarygreen)",}}>
         {didYouMeanText}
       </p>
-      {suggestedWords
-        .filter((word) => word != "")
-        .map((word, index) => (
+      {suggestedWords.filter((word) => word != "").map((word, index) => (
           <ul
             key={index}
             onMouseDown={() => handleSelect(word)}
@@ -91,3 +84,4 @@ const DisplaySearchBarSuggestions: React.FC<Props> = ({
 };
 
 export default DisplaySearchBarSuggestions;
+

@@ -15,13 +15,15 @@ export const LanguageSelectionButton : React.FC = () => {
 
     return(
         <Dropdown>
-        <Dropdown.Toggle variant="success" id="dropdown-basic" className=" bg-white w-[4em] 
-         text-sm sm:text-base md:text-lg lg:text-xl mb-2 mt-2 h-7 " 
-        style={{color : "var(--color-primarygreen)", fontFamily: "var(--font-anek)" , borderRadius : "0px", fontSize: "0.75em"}}>
+        <Dropdown.Toggle variant="success" id="dropdown-basic" 
+        className=" bg-white w-[4em] text-sm sm:text-base md:text-lg lg:text-xl mb-2 mt-2 h-7 " 
+        style={{color : "var(--color-primarygreen)", fontFamily: "var(--font-anek)" , 
+        borderRadius : "0px", fontSize: "0.75em"}}>
           {selectedLanguage}
         </Dropdown.Toggle>
 
-        <Dropdown.Menu className="w-[3em] xs-w[3em] md:w-[3em] lg:w-[3em] xl:w-[3em]" style={{ borderRadius : "0px", minWidth: "1em" }}>
+        <Dropdown.Menu className="w-[3em] xs-w[3em] md:w-[3em] lg:w-[3em] xl:w-[3em]" 
+        style={{ borderRadius : "0px", minWidth: "1em" }}>
           <LanguageSelectionItem languageCode="ENG"/>
           <LanguageSelectionItem languageCode="HT"/>
           <LanguageSelectionItem languageCode="JPN"/>
